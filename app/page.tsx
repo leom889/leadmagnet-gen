@@ -99,7 +99,7 @@ export default function Home() {
           Fill in the details below — we’ll generate your custom campaign:
         </p>
 
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-black mb-1">
           Your service <span className="text-black">*</span>
         </label>
         <input
@@ -109,7 +109,7 @@ export default function Home() {
           className="w-full p-3 mb-4 border border-gray-300 rounded-md bg-gray-100"
         />
 
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-black mb-1">
           Your audience <span className="text-black">*</span>
         </label>
         <input
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
         )}
 
-        <label className="block text-sm font-medium text-gray-700 mt-4">
+        <label className="block text-sm font-medium text-black mt-4">
           Focus of Lead Magnet <span className="text-gray-400">(optional)</span>
         </label>
         <input
@@ -225,12 +225,12 @@ export default function Home() {
           className="w-full p-3 border border-gray-300 rounded-md bg-gray-100"
         />
 
-        <label className="block text-sm font-medium text-gray-700 mt-4">
+        <label className="block text-sm font-medium text-black mt-4">
           Email <span className="text-black">*</span>
         </label>
         <input
           type="email"
-          placeholder="Email to receive your plan (you agree to receive updates too)"
+          placeholder="Email to get plan (agree to communications)"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full p-3 border border-gray-300 rounded-md bg-gray-100"
