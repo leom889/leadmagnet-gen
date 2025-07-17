@@ -214,15 +214,15 @@ export default function Home() {
         )}
 
         <label className="block text-sm font-medium text-gray-700 mt-4">
-          Focus of Lead Magnet <span className="text-gray-400 text-xs">(optional)</span>
+          Focus of Lead Magnet <span className="text-gray-400">(optional)</span>
         </label>
         <input
           type="text"
           name="leadMagnetFocus"
-          placeholder="e.g. Growing biceps in men with low testosterone"
+          placeholder="e.g. Growing biceps in men"
           value={focus}
           onChange={(e) => setFocus(e.target.value)}
-          className="mt-1 block w-full rounded-md border border-gray-300 bg-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="w-full p-3 border border-gray-300 rounded-md bg-gray-100"
         />
 
         <label className="block text-sm font-medium text-gray-700 mt-4">
