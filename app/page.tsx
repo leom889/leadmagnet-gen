@@ -13,6 +13,7 @@ export default function Home() {
   const [cta, setCta] = useState("");
   const [platforms, setPlatforms] = useState<string[]>([]);
   const [offer, setOffer] = useState("");
+  const [focus, setFocus] = useState(""); // ✅ NEW STATE
   const [email, setEmail] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -41,6 +42,7 @@ export default function Home() {
         cta,
         platforms,
         offer,
+        focus, // ✅ INCLUDE IN REQUEST
         email,
       }),
     });
@@ -55,19 +57,14 @@ export default function Home() {
         <div className="mb-3 text-sm font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full inline-block">
           ⚡ AI-Powered Marketing Generator
         </div>
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center leading-tight">
-  <span className="bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent">
-    Create Marketing-Agency-Grade Campaigns
-  </span>
-  <br />
-  in Seconds
-</h1>
-
-
-      <p className="text-gray-500 text-sm sm:text-base md:text-lg text-center leading-snug px-4">
-  lead magnet, content plan & emails — no copywriter needed.
-</p>
-
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-center leading-tight">
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            Create Marketing-Agency-Grade Campaigns in Seconds
+          </span>
+        </h1>
+        <p className="text-gray-500 text-sm sm:text-base md:text-lg text-center leading-snug px-4">
+          lead magnet, content plan & emails — no copywriter needed.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4 max-w-5xl">
@@ -212,12 +209,25 @@ export default function Home() {
           </div>
         )}
 
+        {/* ✅ New input */}
+        <label className="block text-sm font-medium text-gray-700 mt-4">
+          Focus of Lead Magnet <span className="text-gray-400 text-xs">(optional)</span>
+        </label>
+        <input
+          type="text"
+          name="leadMagnetFocus"
+          placeholder="e.g. Growing biceps in men with low testosterone"
+          value={focus}
+          onChange={(e) => setFocus(e.target.value)}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+        />
+
         <input
           type="email"
           placeholder="Email to receive your plan (you agree to receive updates too)"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 border border-gray-300 rounded-md bg-gray-100"
+          className="w-full p-3 border border-gray-300 rounded-md bg-gray-100 mt-4"
           required
         />
 
