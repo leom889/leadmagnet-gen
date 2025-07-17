@@ -55,9 +55,14 @@ export default function Home() {
         <div className="mb-3 text-sm font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full inline-block">
           ⚡ AI-Powered Marketing Generator
         </div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center leading-tight break-words">
-  Create Marketing-Agency-Grade Campaigns in Seconds
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-center leading-tight">
+  <span className="bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent">
+    Create Marketing-Agency-Grade Campaigns
+  </span>
+  <br />
+  in Seconds
 </h1>
+
 
       <p className="text-gray-500 text-sm sm:text-base md:text-lg text-center leading-snug px-4">
   lead magnet, content plan & emails — no copywriter needed.
@@ -225,7 +230,7 @@ export default function Home() {
         </button>
 
         <p className="text-center text-sm text-gray-500 mt-2">
-          No credit card required. Get your full plan instantly.
+          No credit card required. Get your lead magnet instantly.
         </p>
 
         {loading && (
