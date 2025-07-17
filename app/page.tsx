@@ -42,7 +42,7 @@ export default function Home() {
         cta,
         platforms,
         offer,
-        focus, // ✅ INCLUDE IN REQUEST
+        focus,
         email,
       }),
     });
@@ -99,20 +99,24 @@ export default function Home() {
           Fill in the details below — we’ll generate your custom campaign:
         </p>
 
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Your service <span className="text-black">*</span>
+        </label>
         <input
-          placeholder="Your service (e.g. Online Fitness Coach)"
+          placeholder="e.g. Online Fitness Coach"
           value={service}
           onChange={(e) => setService(e.target.value)}
           className="w-full p-3 mb-4 border border-gray-300 rounded-md bg-gray-100"
-          required
         />
 
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Your audience <span className="text-black">*</span>
+        </label>
         <input
-          placeholder="Your audience (e.g. Busy mums, 30–45)"
+          placeholder="e.g. Busy mums, 30–45"
           value={avatar}
           onChange={(e) => setAvatar(e.target.value)}
           className="w-full p-3 mb-4 border border-gray-300 rounded-md bg-gray-100"
-          required
         />
 
         <div className="mb-4">
@@ -209,7 +213,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* ✅ New input */}
         <label className="block text-sm font-medium text-gray-700 mt-4">
           Focus of Lead Magnet <span className="text-gray-400 text-xs">(optional)</span>
         </label>
@@ -219,16 +222,18 @@ export default function Home() {
           placeholder="e.g. Growing biceps in men with low testosterone"
           value={focus}
           onChange={(e) => setFocus(e.target.value)}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border border-gray-300 bg-gray-100 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
         />
 
+        <label className="block text-sm font-medium text-gray-700 mt-4">
+          Email <span className="text-black">*</span>
+        </label>
         <input
           type="email"
           placeholder="Email to receive your plan (you agree to receive updates too)"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 border border-gray-300 rounded-md bg-gray-100 mt-4"
-          required
+          className="w-full p-3 border border-gray-300 rounded-md bg-gray-100"
         />
 
         <button
